@@ -1,4 +1,8 @@
-numero_1 = 7
-numero_2 = 98
-total = numero_1 + numero_2
-print(f'o total da soma é: {total}. essa soma foi de {numero_1} + {numero_2}')
+import openpyxl
+import pandas as pd
+
+data_frame = pd.DataFrame
+data_frame = pd.read_excel('produtos.xlsx')
+print(data_frame['Produto'])
+total = data_frame['Valor'].sum() / data_frame['Valor'].count()
+print(total)
